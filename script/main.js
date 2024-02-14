@@ -1,3 +1,10 @@
+
+window.onload = function() {
+  document.getElementById("play-button").onclick = function() {
+    document.getElementById("background-music").play();
+  };
+};
+
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
@@ -17,16 +24,20 @@ const fetchData = () => {
 
         // Check if the iteration is over
         // Run amimation if so
+
+
         if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
           animationTimeline();
+
+
+
         } 
       });
     });
 };
 
-(function() {
-  document.getElementById("background-music").play();
-})();
+
+
 
 
 // Animation Timeline
@@ -318,14 +329,8 @@ const animationTimeline = () => {
       zIndex: "-1"
     })
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
-    .to(
-      ".last-smile",
-      0.5,
-      {
-        rotation: 90
-      },
-      "+=1"
-    )
+
+
     .from(
       ".flower",
       0.5,
@@ -346,11 +351,12 @@ const animationTimeline = () => {
   // tl.timeScale(2);
 
   // Restart Animation on click
-  const replyBtn = document.getElementById("replay");
-  replyBtn.addEventListener("click", () => {
-    tl.restart();
-  });
+  // const replyBtn = document.getElementById("replay");
+  // replyBtn.addEventListener("click", () => {
+  //   tl.restart();
+  // });
 };
 
 // Run fetch and animation in sequence
 fetchData();
+

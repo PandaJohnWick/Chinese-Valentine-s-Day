@@ -24,6 +24,11 @@ const fetchData = () => {
     });
 };
 
+(function() {
+  document.getElementById("background-music").play();
+})();
+
+
 // Animation Timeline
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
@@ -208,6 +213,8 @@ const animationTimeline = () => {
       },
       0.2
     )
+
+
     .from(
       ".lydia-dp",
       0.5,
@@ -220,12 +227,40 @@ const animationTimeline = () => {
       },
       "-=2"
     )
-    .from(".hat", 0.5, {
-      x: -100,
-      y: 350,
-      rotation: -180,
-      opacity: 0
-    })
+
+    // .from(
+    //   ".lydia-dp",
+    //   0.5,
+    //   {
+    //     scale: 0.1,
+    //     opacity: 0,
+    //     x: 25,
+    //     y: -25,
+    //     rotationZ: -45
+    //   },
+    //   "-=2"
+    // )
+
+
+    // .from(
+    //   ".lydia-dp",
+    //   0.5,
+    //   {
+    //     scale: 0.1,
+    //     opacity: 0,
+    //     x: 25,
+    //     y: -25,
+    //     rotationZ: -45
+    //   },
+    //   "-=2"
+    // )
+
+
+
+
+
+    // .to(".poem-box", { display: "block", duration: 0 })
+
     .staggerFrom(
       ".wish-hbd span",
       0.7,
@@ -290,7 +325,22 @@ const animationTimeline = () => {
         rotation: 90
       },
       "+=1"
-    );
+    )
+    .from(
+      ".flower",
+      0.5,
+      {
+        scale: 0.1,
+        opacity: 0,
+        x: 25,
+        y: -25,
+        rotationZ: -45
+      },
+      "+=1"
+    )
+;
+  
+
 
   // tl.seek("currentStep");
   // tl.timeScale(2);

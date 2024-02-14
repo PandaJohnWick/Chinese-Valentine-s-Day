@@ -5,6 +5,7 @@ html {
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
+  background-color: pink
 }
 
 .container {
@@ -18,16 +19,7 @@ body {
 }
 
 
-.poem-box {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 10px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
-  line-height: 1.6;
-}
+
 
 .container div.six {
   top: 10vh;
@@ -124,6 +116,19 @@ body {
   font-size: 15rem;
 }
 
+.poem-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  line-height: 1.6;
+  display:none;
+}
+
+
 .six {
   position: relative;
 }
@@ -143,6 +148,8 @@ body {
   left: 41.5%;
   /* transform: scale(0.1); */
 }
+
+
 
 .baloons img {
   display: inline-block;
@@ -239,6 +246,12 @@ body {
 .nine p {
   font-size: 2rem;
   font-weight: lighter;
+}
+
+.nine img {
+  display: inline-block;
+  max-width: 50%;
+  height: auto;
 }
 
 #replay {
